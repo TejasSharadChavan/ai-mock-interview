@@ -2,6 +2,7 @@ import { db } from "@/firebase/admin";
 import { getRandomInterviewCover } from "@/lib/utils";
 import { google } from "@ai-sdk/google";
 import { generateText } from "ai";
+import { Timestamp } from "firebase-admin/firestore";
 
 export async function GET() {
   return Response.json({ success: true, data: "ThankYou !" }, { status: 200 });
@@ -35,7 +36,7 @@ export async function POST(request: Request) {
       userId: userid,
       finalized: true,
       coverImage: getRandomInterviewCover(),
-      createdAt: new Date().toISOString(),
+      createdAt: new Date().toISOString() ,
     };
     await db.collection("interviews").add(interview);
     return Response.json({ success: true }, { status: 200 });
