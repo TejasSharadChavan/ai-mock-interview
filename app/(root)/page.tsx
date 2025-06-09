@@ -23,7 +23,7 @@ const Page = async () => {
   const hasUpcomingInterviews = latestInterviews?.length! > 0;
   // console.log(latestInterviews);
   return (
-    <>
+    <>   
       <section className="card-cta">
         <div className="flex flex-col max-w-lg">
           <h2>Get Interview-Ready with AI-powered practice & feedback</h2>
