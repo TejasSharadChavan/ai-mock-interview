@@ -13,7 +13,7 @@ export default function SignOutButton() {
   };
 
   return (
-    <button onClick={handleSignOut} className="max-sm:w-full btn-primary">
+    <button onClick={handleSignOut} className="!bg-primary-200 !text-dark-100 hover:!bg-primary-200/80 !rounded-full !font-bold px-5 cursor-pointer min-h-10">
       Sign out
     </button>
   );
